@@ -36,4 +36,9 @@
             android:title="@string/screenshot_type_category"
             android:fragment="org.candyroms.candycane.fragments.Screenshot" />
 
+         <PreferenceScreen
+            android:key="blur"
+       	    android:title="@string/blur_title"  
+            android:fragment="org.candyroms.candycane.fragments.BlurSettings" />
+
 </PreferenceScreen>
