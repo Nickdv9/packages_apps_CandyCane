@@ -53,4 +53,10 @@
             android:title="@string/keyguard_torch_title"
             android:summary="@string/keyguard_torch_summary"
             android:defaultValue="false" />
+
+     <org.candyroms.candycane.preference.SystemSettingSwitchPreference
+            android:key="fp_unlock_keystore"
+            android:title="@string/fp_unlock_keystore_title"
+            android:summary="@string/fp_unlock_keystore_summary"
+            android:persistent="false" />
 </PreferenceScreen>
