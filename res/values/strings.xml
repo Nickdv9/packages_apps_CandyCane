@@ -783,4 +783,8 @@
     <string name="proximity_wake_title">Prevent accidental wake up</string>
     <string name="proximity_wake_summary">Check the proximity sensor prior to waking up screen</string>
 
+    <!-- Fingerprint unlock keystore -->
+    <string name="fp_unlock_keystore_title">Fingerprint reboot unlock</string>
+    <string name="fp_unlock_keystore_summary">Unlock the device with your fingerprint after a reboot without entering your Pin/Password/Pattern</string>
+
 </resources>
