@@ -46,6 +46,8 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
     private static final String HOME_BUTTON_WAKE = "home_button_wake";
     private static final String VOLUME_ROCKER_WAKE = "volume_rocker_wake";
     public static final String VOLUME_ROCKER_MUSIC_CONTROLS = "volume_rocker_music_controls";
+    private static final String KEY_ANBI = "anbi";
+    private static final String ANBI_ENABLED = "anbi_enabled";
 
     // category keys
     private static final String CATEGORY_HWKEY = "hardware_keys";
@@ -72,6 +74,7 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
     private SwitchPreference mVolumeRockerWake;
     private SwitchPreference mVolumeRockerMusicControl;
     private SwitchPreference mHwKeyDisable;
+    private SwitchPreference mAnbiPreference;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -121,6 +124,8 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
 
         Resources res = getResources();
         mHomeButtonWake = (SwitchPreference) findPreference(HOME_BUTTON_WAKE);
+
+        mAnbiPreference = (SwitchPreference) findPreference(KEY_ANBI);
 
         // back key
         if (!hasBackKey) {
@@ -199,6 +204,11 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getContentResolver(), SWAP_VOLUME_BUTTONS,
                     value ? 1 : 0);
+            return true;
+        } else if (preference == mAnbiPreference) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putIntForUser(getContentResolver(), ANBI_ENABLED,
+                    value ? 1 : 0, UserHandle.USER_CURRENT);
             return true;
         } else if (preference == mVolumeRockerWake) {
             boolean value = (Boolean) newValue;

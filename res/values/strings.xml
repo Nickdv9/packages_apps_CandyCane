@@ -787,4 +787,8 @@
     <string name="fp_unlock_keystore_title">Fingerprint reboot unlock</string>
     <string name="fp_unlock_keystore_summary">Unlock the device with your fingerprint after a reboot without entering your Pin/Password/Pattern</string>
 
+    <!-- ANBI -->
+    <string name="anbi_title">Accidental touch</string>
+    <string name="anbi_summary">Prevent interaction with navigation buttons while the screen is being touched</string>
+
 </resources>
